@@ -1,0 +1,12 @@
+.App {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: burlywood;
+    flex-grow: 1;
+    height: 100vh;
+    .title {
+        font-size: 6vmin;
+        color: black;
+    }
+}
