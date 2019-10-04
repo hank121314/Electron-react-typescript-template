@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello Electron React!</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      {
+        // Dynamically insert the bundled app script in the renderer process
+        const port = process.env.PORT || 1212;
+        const script = process.env.HOT
+              ? 'http://localhost:' + port + '/dist/react.dev.js'
+              : '../public/dist/react.prod.js';
+        
+        document.write(`<script defer src="${script}"><\/script>`);
+      }
+    </script>
+  </body>
+</html>
