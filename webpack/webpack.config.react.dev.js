@@ -14,7 +14,7 @@ const config = merge.smart(baseConfig, {
     ...(process.env.PLAIN_HMR ? [] : ['react-hot-loader/patch']),
     `webpack-dev-server/client?http://localhost:${port}/`,
     'webpack/hot/only-dev-server',
-    require.resolve('../src/app/react.tsx'),
+    require.resolve('../src/app/main.tsx'),
   ],
 
   devtool: 'inline-source-map',

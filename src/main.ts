@@ -22,8 +22,6 @@ app.on('ready', () => {
     }),
   );
 
-  mainWindow.webContents.openDevTools();
-
   mainWindow.once('ready-to-show', () => {
     if (!mainWindow) {
       throw new Error('"mainWindow" is not defined');

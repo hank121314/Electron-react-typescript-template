@@ -13,7 +13,7 @@ const config = merge.smart(baseConfig, {
 
   target: 'electron-renderer',
 
-  entry: path.join(__dirname, '..', 'src/app/react.tsx'),
+  entry: path.join(__dirname, '..', 'src/app/main.tsx'),
 
   output: {
     path: path.join(__dirname, '..', 'public', 'dist'),

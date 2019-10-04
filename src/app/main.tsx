@@ -1,4 +1,4 @@
-// src/react.tsx
+// src/main.tsx
 import { AppContainer as ReactHotAppContainer } from 'react-hot-loader';
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
