@@ -5,9 +5,9 @@
 ## Install
 Clone the repo:
 
-`
+```
 git clone --depth 1 --single-branch --branch master https://github.com/hank121314/Electron-react-typescript-template.git your-project-name
-`
+```
 
 And install the dependencies.
 
