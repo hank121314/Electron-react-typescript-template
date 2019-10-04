@@ -31,8 +31,4 @@ module.exports = {
 
     new webpack.NamedModulesPlugin(),
   ],
-  node: {
-    __dirname: false,
-    __filename: false
-  },
 };

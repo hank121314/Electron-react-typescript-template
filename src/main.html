@@ -8,13 +8,21 @@
     <div id="root"></div>
     <script>
       {
+        const scripts = [];
+
         // Dynamically insert the bundled app script in the renderer process
         const port = process.env.PORT || 1212;
-        const script = process.env.HOT
-              ? 'http://localhost:' + port + '/dist/react.dev.js'
-              : '../public/dist/react.prod.js';
-        
-        document.write(`<script defer src="${script}"><\/script>`);
+        scripts.push(
+          (process.env.HOT)
+            ? 'http://localhost:' + port + '/public/react.dev.js'
+            : './dist/renderer.prod.js'
+        );
+
+        document.write(
+          scripts
+            .map(script => `<script defer src="${script}"><\/script>`)
+            .join('')
+        );
       }
     </script>
   </body>

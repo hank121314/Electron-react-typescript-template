@@ -26,11 +26,16 @@ app.on('ready', () => {
     if (!mainWindow) {
       throw new Error('"mainWindow" is not defined');
     }
+    mainWindow.webContents.openDevTools();
     if (process.env.START_MINIMIZED) {
       mainWindow.minimize();
     } else {
       mainWindow.show();
       mainWindow.focus();
     }
+  });
+
+  mainWindow.on('closed', () => {
+    mainWindow = null;
   });
 });

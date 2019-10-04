@@ -5,7 +5,7 @@ const merge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base');
 
 const port = process.env.PORT || 1212;
-const publicPath = `http://localhost:${port}/dist`;
+const publicPath = `http://localhost:${port}/public`;
 
 const config = merge.smart(baseConfig, {
   target: 'electron-renderer',
@@ -45,9 +45,7 @@ const config = merge.smart(baseConfig, {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin({
-      multiStep: true,
-    }),
+    new webpack.HotModuleReplacementPlugin(),
 
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
@@ -68,12 +66,12 @@ const config = merge.smart(baseConfig, {
     publicPath,
     compress: true,
     noInfo: true,
-    stats: 'errors-only',
+    stats: 'verbose',
     inline: true,
     lazy: false,
     hot: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'public'),
     watchOptions: {
       aggregateTimeout: 300,
       ignored: /node_modules/,

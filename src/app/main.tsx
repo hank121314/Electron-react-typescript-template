@@ -1,11 +1,7 @@
-// src/main.tsx
-import { AppContainer as ReactHotAppContainer } from 'react-hot-loader';
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-
-const Index = () => {
-  return <div>Hello React!!</div>;
-};
+import { AppContainer as ReactHotAppContainer } from 'react-hot-loader';
+import { Index } from './App';
 
 const AppContainer = process.env.PLAIN_HMR ? Fragment : ReactHotAppContainer;
 
@@ -15,3 +11,9 @@ ReactDOM.render(
   </AppContainer>,
   document.getElementById('root'),
 );
+
+if (process.env.NODE_ENV === 'development') {
+  if (module.hot) {
+    module.hot.accept();
+  }
+}
