@@ -1,5 +1,8 @@
 {
   "**/*.+(js|jsx|ts|tsx)": [
-      "eslint --ignore-pattern '!.eslintrc.js'"
-    ],
+    "eslint --ignore-pattern '!.eslintrc.js' --ignore-pattern '!.stylelintrc.js'",
+  ],
+  "**/*.+(scss|sass|css)": [
+    "stylelint",
+  ]
 }
