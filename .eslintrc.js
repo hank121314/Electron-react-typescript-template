@@ -11,7 +11,11 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  rules: { 'object-curly-spacing': 0, 'indent': [2, 2] },
+  rules: {
+    'object-curly-spacing': 0,
+    'indent': [2, 2],
+    '@typescript-eslint/interface-name-prefix': 1,
+  },
   settings: {
     react: {
       createClass: 'createReactClass',

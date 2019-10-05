@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer as ReactHotAppContainer } from 'react-hot-loader';
-import { Index } from './App';
+import { App } from './App';
 import 'normalize.css';
 
 const AppContainer = process.env.PLAIN_HMR ? Fragment : ReactHotAppContainer;
 
 ReactDOM.render(
   <AppContainer>
-    <Index />
+    <App />
   </AppContainer>,
   document.getElementById('root'),
 );

@@ -1,0 +1,9 @@
+@import '../../assets/fonts/Roboto/Roboto.scss';
+@import 'rfs/scss';
+
+.Dashboard {
+    .title {
+        font-family: Roboto;
+        @include font-size(2.5rem);
+    }
+}
