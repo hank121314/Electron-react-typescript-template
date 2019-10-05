@@ -1,0 +1,20 @@
+@mixin fface($path, $family, $type: '', $weight: 400, $style: normal) {
+    @font-face {
+        font-family: $family;
+        // traditional src inclusions
+        src: url('#{$path}#{$type}.eot');
+        src: url('#{$path}#{$type}.eot?#iefix') format('embedded-opentype'),
+        url('#{$path}#{$type}.woff2') format('woff2'),
+        url('#{$path}#{$type}.woff') format('woff'),
+        url('#{$path}#{$type}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+$dir: './';
+$family: 'Roboto';
+@include fface('#{$dir}#{$family}', $family, '-latin-regular', 400);
+@include fface('#{$dir}#{$family}', $family, '-latin-300', 300);
+@include fface('#{$dir}#{$family}', $family, '-latin-500', 500);
+@include fface('#{$dir}#{$family}', $family, '-latin-700', 700);
