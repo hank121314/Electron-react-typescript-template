@@ -36,3 +36,13 @@ To package apps for the local platform:
 `
 yarn package
 `
+
+
+## Branch of repository
+
+```
+Electron + React + Typescript
+├── only-electron-react-typescript // only contains minimum require for electron-react-typescript
+├── electron-react-typescript-scss // add scss integration
+└── electron-react-typescript-scss-material-design // add material design and Roboto fonts
+```
