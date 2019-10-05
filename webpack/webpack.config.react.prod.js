@@ -78,6 +78,11 @@ const config = merge.smart(baseConfig, {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
+              sassOptions: {
+                includePaths: [
+                  require('path').resolve(__dirname, 'node_modules'),
+                ],
+              },
             },
           },
         ],
@@ -104,6 +109,11 @@ const config = merge.smart(baseConfig, {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
+              sassOptions: {
+                includePaths: [
+                  require('path').resolve(__dirname, 'node_modules'),
+                ],
+              },
             },
           },
         ],

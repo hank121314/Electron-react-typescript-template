@@ -1,4 +1,5 @@
 @import './assets/fonts/Roboto/Roboto.scss';
+@import 'rfs/scss';
 
 .App {
     display: flex;
@@ -7,10 +8,11 @@
     background-color: burlywood;
     flex-grow: 1;
     height: 100vh;
+
     .title {
         font-family: Roboto;
-        font-size: 12vmin;
-        color: black;
+        @include font-size(4.5rem);
         font-weight: 400;
     }
+
 }

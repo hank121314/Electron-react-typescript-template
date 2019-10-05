@@ -85,6 +85,13 @@ const config = merge.smart(baseConfig, {
           'resolve-url-loader',
           {
             loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: [
+                  require('path').resolve(__dirname, 'node_modules'),
+                ],
+              },
+            },
           },
         ],
       },
@@ -109,6 +116,13 @@ const config = merge.smart(baseConfig, {
           'resolve-url-loader',
           {
             loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: [
+                  require('path').resolve(__dirname, 'node_modules'),
+                ],
+              },
+            },
           },
         ],
       },
