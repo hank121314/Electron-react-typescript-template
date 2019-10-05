@@ -1,6 +1,6 @@
 // src/main.tsx
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-export const Index = () => {
+export const Index = (): ReactElement => {
   return <div>Hello React!!</div>;
 };
