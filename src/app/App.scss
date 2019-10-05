@@ -1,12 +1,16 @@
-.App {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-color: burlywood;
-    flex-grow: 1;
-    height: 100vh;
-    .title {
-        font-size: 6vmin;
-        color: black;
-    }
+$background: rgb(222, 184, 135);
+$title: rgb(0, 0, 0);
+
+.app {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-grow: 1;
+  height: 100vh;
+  background-color: $background;
+
+  .title {
+    font-size: 6vmin;
+    color: $title;
+  }
 }

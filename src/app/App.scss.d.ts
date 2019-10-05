@@ -1,5 +1,5 @@
 export interface IAppScss {
-  App: string;
+  app: string;
   title: string;
 }
 
